@@ -17,6 +17,7 @@
 		F58510952AC017CD0088B2D7 /* TimeLapseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58510942AC017CD0088B2D7 /* TimeLapseTests.swift */; };
 		F585109F2AC017CD0088B2D7 /* TimeLapseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F585109E2AC017CD0088B2D7 /* TimeLapseUITests.swift */; };
 		F58510A12AC017CD0088B2D7 /* TimeLapseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58510A02AC017CD0088B2D7 /* TimeLapseUITestsLaunchTests.swift */; };
+		F5AFB3102AC01B8E00A8936D /* Sprite Graffiti.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5AFB30F2AC01B8E00A8936D /* Sprite Graffiti.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		F585109A2AC017CD0088B2D7 /* TimeLapseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeLapseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F585109E2AC017CD0088B2D7 /* TimeLapseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLapseUITests.swift; sourceTree = "<group>"; };
 		F58510A02AC017CD0088B2D7 /* TimeLapseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLapseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F5AFB30F2AC01B8E00A8936D /* Sprite Graffiti.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Sprite Graffiti.ttf"; path = "../../../../../Downloads/Sprite Graffiti.ttf"; sourceTree = "<group>"; };
+		F5AFB3122AC01B9300A8936D /* ofont.ru_Sprite Graffiti.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ofont.ru_Sprite Graffiti.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 		F58510792AC017CC0088B2D7 /* TimeLapse */ = {
 			isa = PBXGroup;
 			children = (
+				F5AFB3112AC01B9300A8936D /* font */,
+				F5AFB30F2AC01B8E00A8936D /* Sprite Graffiti.ttf */,
 				F585107A2AC017CC0088B2D7 /* AppDelegate.swift */,
 				F585107C2AC017CC0088B2D7 /* SceneDelegate.swift */,
 				F585107E2AC017CC0088B2D7 /* ViewController.swift */,
@@ -128,6 +133,14 @@
 				F58510A02AC017CD0088B2D7 /* TimeLapseUITestsLaunchTests.swift */,
 			);
 			path = TimeLapseUITests;
+			sourceTree = "<group>";
+		};
+		F5AFB3112AC01B9300A8936D /* font */ = {
+			isa = PBXGroup;
+			children = (
+				F5AFB3122AC01B9300A8936D /* ofont.ru_Sprite Graffiti.ttf */,
+			);
+			path = font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F585108A2AC017CD0088B2D7 /* LaunchScreen.storyboard in Resources */,
+				F5AFB3102AC01B8E00A8936D /* Sprite Graffiti.ttf in Resources */,
 				F58510872AC017CD0088B2D7 /* Assets.xcassets in Resources */,
 				F58510822AC017CC0088B2D7 /* Main.storyboard in Resources */,
 			);

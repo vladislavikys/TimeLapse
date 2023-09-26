@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -17,28 +18,322 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TimeLapse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TameLapseCalc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8N-Ua-2u9">
-                                <rect key="frame" x="15" y="74" width="353" height="53"/>
-                                <fontDescription key="fontDescription" name="SpriteGraffiti" family="Sprite Graffiti" pointSize="53"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TameLapseCalc" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8N-Ua-2u9">
+                                <rect key="frame" x="15" y="63" width="331" height="147"/>
+                                <fontDescription key="fontDescription" name="SpriteGraffiti" family="Sprite Graffiti" pointSize="73"/>
+                                <color key="textColor" red="0.22352941176470587" green="0.24313725490196078" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="1" height="1"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Jds-yP-rP1">
+                                <rect key="frame" x="15" y="240" width="331" height="382.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yhU-C6-L70">
+                                        <rect key="frame" x="0.0" y="0.0" width="326" height="36.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clip length" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zES-Xa-C1a">
+                                                <rect key="frame" x="0.0" y="0.0" width="167" height="36.5"/>
+                                                <fontDescription key="fontDescription" name="SpriteGraffiti" family="Sprite Graffiti" pointSize="35"/>
+                                                <color key="textColor" red="0.66666666666666663" green="0.84705882352941175" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" systemColor="labelColor"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d2K-q9-wV4">
+                                                <rect key="frame" x="182" y="1.5" width="54" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="54" id="Ywa-mq-v7G"/>
+                                                    <constraint firstAttribute="height" constant="34" id="vH7-Ts-vx6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="evu-UP-ldb">
+                                                <rect key="frame" x="251" y="3" width="75" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="2Xm-47-S5C"/>
+                                                    <constraint firstAttribute="width" constant="75" id="fEb-Q7-fu2"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="sec"/>
+                                                    <segment title="min"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="evu-UP-ldb" firstAttribute="leading" secondItem="d2K-q9-wV4" secondAttribute="trailing" constant="5" id="88N-qh-MWd"/>
+                                            <constraint firstItem="zES-Xa-C1a" firstAttribute="centerY" secondItem="yhU-C6-L70" secondAttribute="centerY" id="hbe-Rv-lia"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="SfS-BW-IsW">
+                                        <rect key="frame" x="0.0" y="56.5" width="326" height="36.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total  time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Znh-0k-5U1">
+                                                <rect key="frame" x="0.0" y="0.0" width="167" height="36.5"/>
+                                                <fontDescription key="fontDescription" name="SpriteGraffiti" family="Sprite Graffiti" pointSize="35"/>
+                                                <color key="textColor" red="0.66666666666666663" green="0.84705882352941175" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" systemColor="labelColor"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lkl-Cd-tdZ">
+                                                <rect key="frame" x="182" y="0.0" width="54" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="54" id="W2g-2w-yEf"/>
+                                                    <constraint firstAttribute="height" constant="34" id="jDa-Zt-nho"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4yI-vK-bjP">
+                                                <rect key="frame" x="251" y="0.0" width="75" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="tkd-Lo-rzT"/>
+                                                    <constraint firstAttribute="height" constant="31" id="yfp-vb-qel"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="hrs"/>
+                                                    <segment title="days"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Znh-0k-5U1" firstAttribute="centerY" secondItem="SfS-BW-IsW" secondAttribute="centerY" id="WRg-Ym-4wk"/>
+                                            <constraint firstItem="4yI-vK-bjP" firstAttribute="leading" secondItem="lkl-Cd-tdZ" secondAttribute="trailing" constant="5" id="stg-zO-a8V"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="JUh-0Q-ffX">
+                                        <rect key="frame" x="0.0" y="113" width="326" height="37.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXR-oU-9ye">
+                                                <rect key="frame" x="0.0" y="0.0" width="133" height="37.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="133" id="qyi-Ad-thj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SpriteGraffiti" family="Sprite Graffiti" pointSize="35"/>
+                                                <color key="textColor" red="0.66666666666666663" green="0.84705882352941175" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" systemColor="labelColor"/>
+                                                <size key="shadowOffset" width="2" height="2"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e02-k6-0qW">
+                                                <rect key="frame" x="148" y="0.0" width="178" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="54" id="Qwl-Tb-cv8"/>
+                                                    <constraint firstAttribute="height" constant="34" id="SGf-U3-BKD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="e02-k6-0qW" firstAttribute="leading" secondItem="RXR-oU-9ye" secondAttribute="trailing" constant="15" id="2BE-n1-zUW"/>
+                                            <constraint firstItem="RXR-oU-9ye" firstAttribute="centerY" secondItem="JUh-0Q-ffX" secondAttribute="centerY" id="XTK-fa-pOM"/>
+                                            <constraint firstAttribute="trailing" secondItem="e02-k6-0qW" secondAttribute="trailing" constant="90" id="ooI-wq-KPX"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lby-LM-Diu">
+                                        <rect key="frame" x="0.0" y="170.5" width="326" height="37.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRN-xz-fsM">
+                                                <rect key="frame" x="0.0" y="0.0" width="167" height="37.5"/>
+                                                <fontDescription key="fontDescription" name="SpriteGraffiti" family="Sprite Graffiti" pointSize="35"/>
+                                                <color key="textColor" red="0.66666666666666663" green="0.84705882352941175" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" systemColor="labelColor"/>
+                                                <size key="shadowOffset" width="2" height="2"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gxw-RN-pBt">
+                                                <rect key="frame" x="182" y="0.0" width="54" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="TDQ-3e-LBw"/>
+                                                    <constraint firstAttribute="width" constant="54" id="o7w-EL-wpN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="50O-um-f09">
+                                                <rect key="frame" x="251" y="0.0" width="75" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="2TY-dr-VTK"/>
+                                                    <constraint firstAttribute="width" constant="75" id="ezM-sV-iMp"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="mb"/>
+                                                    <segment title="GB"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="PRN-xz-fsM" firstAttribute="centerY" secondItem="lby-LM-Diu" secondAttribute="centerY" id="2na-lQ-l0M"/>
+                                            <constraint firstItem="50O-um-f09" firstAttribute="leading" secondItem="Gxw-RN-pBt" secondAttribute="trailing" constant="5" id="tr3-xg-azq"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="BXU-YQ-EAk">
+                                        <rect key="frame" x="0.0" y="228" width="326" height="37.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interval" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pe9-Pl-8Aa">
+                                                <rect key="frame" x="0.0" y="0.0" width="167" height="37.5"/>
+                                                <fontDescription key="fontDescription" name="SpriteGraffiti" family="Sprite Graffiti" pointSize="35"/>
+                                                <color key="textColor" red="0.66666666666666663" green="0.84705882352941175" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" systemColor="labelColor"/>
+                                                <size key="shadowOffset" width="2" height="2"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lYk-cl-cwJ">
+                                                <rect key="frame" x="182" y="0.0" width="54" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="54" id="GHo-1Z-EQD"/>
+                                                    <constraint firstAttribute="height" constant="34" id="sqK-Dy-sIs"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                            </textField>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xmX-WG-hH4">
+                                                <rect key="frame" x="251" y="0.0" width="75" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="Qav-ky-Qju"/>
+                                                    <constraint firstAttribute="width" constant="75" id="tLj-4O-mhD"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="sec"/>
+                                                    <segment title="min"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="xmX-WG-hH4" firstAttribute="leading" secondItem="lYk-cl-cwJ" secondAttribute="trailing" constant="5" id="5O7-od-TDY"/>
+                                            <constraint firstItem="pe9-Pl-8Aa" firstAttribute="centerY" secondItem="BXU-YQ-EAk" secondAttribute="centerY" id="zCF-c7-Tms"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vtz-ew-RYY">
+                                        <rect key="frame" x="0.0" y="285.5" width="326" height="38.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vv-DQ-7sS">
+                                                <rect key="frame" x="0.0" y="0.0" width="257" height="38.5"/>
+                                                <fontDescription key="fontDescription" name="SpriteGraffiti" family="Sprite Graffiti" pointSize="35"/>
+                                                <color key="textColor" red="0.66666666666666663" green="0.84705882352941175" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" systemColor="labelColor"/>
+                                                <size key="shadowOffset" width="3" height="3"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lFp-tp-wGL">
+                                                <rect key="frame" x="272" y="0.0" width="54" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="54" id="1Kj-va-qbt"/>
+                                                    <constraint firstAttribute="height" constant="34" id="C01-2k-FGT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="9vv-DQ-7sS" firstAttribute="centerY" secondItem="vtz-ew-RYY" secondAttribute="centerY" id="CHc-h1-Hlj"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Fza-eQ-3e8">
+                                        <rect key="frame" x="0.0" y="344" width="326" height="38.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memory size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1F6-ip-Au6">
+                                                <rect key="frame" x="0.0" y="0.0" width="167" height="38.5"/>
+                                                <fontDescription key="fontDescription" name="SpriteGraffiti" family="Sprite Graffiti" pointSize="35"/>
+                                                <color key="textColor" red="0.66666666666666663" green="0.84705882352941175" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" systemColor="labelColor"/>
+                                                <size key="shadowOffset" width="3" height="3"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0UG-R4-tMU">
+                                                <rect key="frame" x="182" y="0.0" width="54" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="HeU-AD-HHc"/>
+                                                    <constraint firstAttribute="width" constant="54" id="dhB-Wv-TMb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NDc-qR-O9x">
+                                                <rect key="frame" x="251" y="0.0" width="75" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="MRG-tj-BCV"/>
+                                                    <constraint firstAttribute="width" constant="75" id="pFg-I2-S27"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="mb"/>
+                                                    <segment title="GB"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="NDc-qR-O9x" firstAttribute="leading" secondItem="0UG-R4-tMU" secondAttribute="trailing" constant="5" id="fb2-kN-bkS"/>
+                                            <constraint firstItem="1F6-ip-Au6" firstAttribute="centerY" secondItem="Fza-eQ-3e8" secondAttribute="centerY" id="tHy-UB-BRb"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vtz-ew-RYY" secondAttribute="trailing" constant="5" id="1tp-4U-asx"/>
+                                    <constraint firstAttribute="trailing" secondItem="SfS-BW-IsW" secondAttribute="trailing" constant="5" id="7Vw-kN-3M4"/>
+                                    <constraint firstAttribute="trailing" secondItem="BXU-YQ-EAk" secondAttribute="trailing" constant="5" id="L7J-Od-sq3"/>
+                                    <constraint firstAttribute="trailing" secondItem="yhU-C6-L70" secondAttribute="trailing" constant="5" id="Lvn-r3-EhS"/>
+                                    <constraint firstAttribute="trailing" secondItem="lby-LM-Diu" secondAttribute="trailing" constant="5" id="YgZ-Sx-hb7"/>
+                                    <constraint firstItem="SfS-BW-IsW" firstAttribute="leading" secondItem="Jds-yP-rP1" secondAttribute="leading" id="ftO-c2-QSp"/>
+                                    <constraint firstAttribute="trailing" secondItem="JUh-0Q-ffX" secondAttribute="trailing" constant="5" id="w7Z-wi-N8b"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fza-eQ-3e8" secondAttribute="trailing" constant="5" id="wiC-cx-ACE"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYD-A8-Fay">
+                                <rect key="frame" x="156" y="728" width="74" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <size key="titleShadowOffset" width="2" height="3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="CALC">
+                                    <fontDescription key="titleFontDescription" name="SpriteGraffiti" family="Sprite Graffiti" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="calcButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OYY-bt-B69"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.0" green="0.67843137254901964" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Jds-yP-rP1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="89Y-nQ-Eu8"/>
+                            <constraint firstItem="Jds-yP-rP1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Vpa-Hw-BaC"/>
+                            <constraint firstAttribute="trailing" secondItem="Jds-yP-rP1" secondAttribute="trailing" constant="5" id="YGx-xH-3kr"/>
                             <constraint firstItem="a8N-Ua-2u9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="bJ0-F5-PC5"/>
+                            <constraint firstItem="Jds-yP-rP1" firstAttribute="trailing" secondItem="a8N-Ua-2u9" secondAttribute="trailing" id="diM-VF-SIs"/>
+                            <constraint firstItem="Jds-yP-rP1" firstAttribute="top" secondItem="a8N-Ua-2u9" secondAttribute="bottom" constant="30" id="h5p-dL-cCI"/>
                             <constraint firstItem="a8N-Ua-2u9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="r46-jG-2W1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lFp-tp-wGL" secondAttribute="trailing" constant="5" id="rNz-Oy-FWQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clipLengthSC" destination="evu-UP-ldb" id="n4O-bC-TXZ"/>
+                        <outlet property="clipLengthTF" destination="d2K-q9-wV4" id="pJ9-wE-JyO"/>
+                        <outlet property="fpsTF" destination="e02-k6-0qW" id="u3F-L6-sjd"/>
+                        <outlet property="imageSizeSC" destination="50O-um-f09" id="UQF-i8-RQs"/>
+                        <outlet property="imageSizeTF" destination="Gxw-RN-pBt" id="nu2-fJ-kzd"/>
+                        <outlet property="intervalSC" destination="xmX-WG-hH4" id="ZRY-az-K5P"/>
+                        <outlet property="intervalTF" destination="lYk-cl-cwJ" id="XfY-ey-QrS"/>
+                        <outlet property="memorySizeSC" destination="NDc-qR-O9x" id="Ihp-ek-yKn"/>
+                        <outlet property="memorySizeTF" destination="0UG-R4-tMU" id="f5X-BM-FF8"/>
+                        <outlet property="numberTF" destination="lFp-tp-wGL" id="dwK-a9-Ctu"/>
+                        <outlet property="totalTimeSC" destination="4yI-vK-bjP" id="SXX-du-kPz"/>
+                        <outlet property="totalTimeTF" destination="lkl-Cd-tdZ" id="inK-Sd-rFu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-37" y="4"/>
+            <point key="canvasLocation" x="-37.404580152671755" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

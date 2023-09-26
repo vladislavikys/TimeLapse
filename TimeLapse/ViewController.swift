@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var clipsValue = 1
+    
     
     
     @IBOutlet weak var clipLengthTF: UITextField!
@@ -20,7 +22,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var fpsTF: UITextField!
     
     @IBOutlet weak var imageSizeTF: UITextField!
-    @IBOutlet weak var imageSizeSC: UISegmentedControl!
     
     @IBOutlet weak var intervalTF: UITextField!
     @IBOutlet weak var intervalSC: UISegmentedControl!
@@ -28,14 +29,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var numberTF: UITextField!
     
     @IBOutlet weak var memorySizeTF: UITextField!
-    
     @IBOutlet weak var memorySizeSC: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        clipLengthSC.selectedSegmentIndex = 0
+        clipLengthSC.addTarget(self, action: #selector(secondMinut), for: .valueChanged)
         
+        totalTimeSC.selectedSegmentIndex = 0
+        totalTimeSC.addTarget(self, action: #selector(hrsDay), for: .valueChanged)
+        
+        intervalSC.selectedSegmentIndex = 0
+        intervalSC.addTarget(self, action: #selector(secondMinut), for: .valueChanged)
+        
+        memorySizeSC.selectedSegmentIndex = 0
+        memorySizeSC.addTarget(self, action: #selector(mbGb), for: .valueChanged)
     }
 
+    
 
     @IBAction func calcButton(_ sender: UIButton) {
         let one  = Int(clipLengthTF.text!)!
@@ -55,12 +66,57 @@ class ViewController: UIViewController {
         
         
         
-        
-        
-        
-        
-        
-        
     }
 }
 
+
+extension ViewController{
+    @objc func secondMinut(_ sender: UISegmentedControl){
+        let selectIndex = sender.selectedSegmentIndex
+        
+        switch selectIndex{
+        case 0:
+            print("выбраны сек")
+        case 1:
+            print("выбраны мин")
+        default:
+            break
+
+        }
+        
+    }
+    
+    @objc func hrsDay(_ sender: UISegmentedControl){
+        let selectIndex = sender.selectedSegmentIndex
+        
+        switch selectIndex{
+        case 0:
+            print("выбраны hrs")
+        case 1:
+            print("выбраны days")
+        default:
+            break
+
+        }
+        
+    }
+    
+    @objc func mbGb(_ sender: UISegmentedControl){
+        let selectIndex = sender.selectedSegmentIndex
+        
+        switch selectIndex{
+        case 0:
+            print("выбраны mb")
+        case 1:
+            print("выбраны gb")
+        default:
+            break
+
+        }
+        
+    }
+    
+    
+    
+    
+}

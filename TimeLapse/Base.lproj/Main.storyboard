@@ -140,7 +140,7 @@
                                         <rect key="frame" x="0.0" y="170.5" width="326" height="37.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRN-xz-fsM">
-                                                <rect key="frame" x="0.0" y="0.0" width="167" height="37.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="257" height="37.5"/>
                                                 <fontDescription key="fontDescription" name="SpriteGraffiti" family="Sprite Graffiti" pointSize="35"/>
                                                 <color key="textColor" red="0.66666666666666663" green="0.84705882352941175" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -148,7 +148,7 @@
                                                 <size key="shadowOffset" width="2" height="2"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gxw-RN-pBt">
-                                                <rect key="frame" x="182" y="0.0" width="54" height="34"/>
+                                                <rect key="frame" x="272" y="0.0" width="54" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="TDQ-3e-LBw"/>
                                                     <constraint firstAttribute="width" constant="54" id="o7w-EL-wpN"/>
@@ -156,21 +156,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="50O-um-f09">
-                                                <rect key="frame" x="251" y="0.0" width="75" height="32"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="31" id="2TY-dr-VTK"/>
-                                                    <constraint firstAttribute="width" constant="75" id="ezM-sV-iMp"/>
-                                                </constraints>
-                                                <segments>
-                                                    <segment title="mb"/>
-                                                    <segment title="GB"/>
-                                                </segments>
-                                            </segmentedControl>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="PRN-xz-fsM" firstAttribute="centerY" secondItem="lby-LM-Diu" secondAttribute="centerY" id="2na-lQ-l0M"/>
-                                            <constraint firstItem="50O-um-f09" firstAttribute="leading" secondItem="Gxw-RN-pBt" secondAttribute="trailing" constant="5" id="tr3-xg-azq"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="BXU-YQ-EAk">
@@ -308,14 +296,13 @@
                             <constraint firstItem="Jds-yP-rP1" firstAttribute="trailing" secondItem="a8N-Ua-2u9" secondAttribute="trailing" id="diM-VF-SIs"/>
                             <constraint firstItem="Jds-yP-rP1" firstAttribute="top" secondItem="a8N-Ua-2u9" secondAttribute="bottom" constant="30" id="h5p-dL-cCI"/>
                             <constraint firstItem="a8N-Ua-2u9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="r46-jG-2W1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lFp-tp-wGL" secondAttribute="trailing" constant="5" id="rNz-Oy-FWQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lFp-tp-wGL" secondAttribute="trailing" constant="15" id="rNz-Oy-FWQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="clipLengthSC" destination="evu-UP-ldb" id="n4O-bC-TXZ"/>
                         <outlet property="clipLengthTF" destination="d2K-q9-wV4" id="pJ9-wE-JyO"/>
                         <outlet property="fpsTF" destination="e02-k6-0qW" id="u3F-L6-sjd"/>
-                        <outlet property="imageSizeSC" destination="50O-um-f09" id="UQF-i8-RQs"/>
                         <outlet property="imageSizeTF" destination="Gxw-RN-pBt" id="nu2-fJ-kzd"/>
                         <outlet property="intervalSC" destination="xmX-WG-hH4" id="ZRY-az-K5P"/>
                         <outlet property="intervalTF" destination="lYk-cl-cwJ" id="XfY-ey-QrS"/>
